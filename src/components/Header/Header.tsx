@@ -1,57 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Header.module.css";
-import brandLogo from "../../assets/logo.svg";
+import logo from "../../assets/bandLogo.svg";
+import { languages, Navigations } from "./data";
+import { UserRound, ShoppingCart, Heart, Search } from "lucide-react";
 
-export default function Header() {
+const Header = () => {
+  const [nowActive, setNowActive] = useState('EN');
+
   return (
-    <header className="styles">
-      <div className={styles["top-bar"]}>
-          <div className={styles["top-bar-left"]}>
-            <a href="#" className="lang-switch">
-              EN
+    <header>
+      <div className={styles.container}>
+        <div className={styles.topBar}>
+          <div className={styles.topBarLeft}>
+            {languages.map((lang, index) => (
+              <a
+                href={lang.link}
+                key={index}
+                className={`${
+                  lang.language === nowActive ? styles.activeLink : ""
+                }`}
+                onClick={() => {
+                  // e.preventDefault();
+                  setNowActive(lang.language);
+                }}
+              >
+                {lang.language}
+              </a>
+            ))}
+          </div>
+          <div>
+            <img className={styles.brandLogo} src={logo} alt="logo" />
+          </div>
+          <div className={styles.topBarRight}>
+            <a key="UserRound" href="#">
+              <UserRound />
             </a>
-            <a href="#" className="lang-switch">
-              RU
+            <a key="Heart" href="#">
+              <Heart />
             </a>
-            <a href="#" className="lang-switch">
-              FR
-            </a>
-            <a href="#" className="lang-switch">
-              IT
+            <a key="ShoppingCart" href="#">
+              <ShoppingCart />
             </a>
           </div>
-        <div className={styles["logo"]}>
-          <img src={brandLogo} alt="logo" />
         </div>
-        <div className={styles["top-bar-right"]}>
-          <a href="#" className="icon-user">
-            user
-          </a>
-          <a href="#" className="icon-heart">
-            heart
-          </a>
-          <a href="#" className="icon-cart">
-            cart
-          </a>
-        </div>
-      </div>
-
-      <div className={styles["main-nav"]}>
-        <nav className={styles["nav-left"]}>
-          <a href="#">Men</a>
-          <a href="#">Women</a>
-          <a href="#">Kids</a>
-          <a href="#">Brands</a>
-          <a href="#">New Arrivals</a>
-          <a href="#">Coming Soon</a>
-          <a href="#">Sale</a>
-          <a href="#">Editorial</a>
-          <a href="#">Raffles</a>
-        </nav>
-        <div className={styles["input-right"]}>
-          <input type="text" placeholder="Search entire store here..." />
+        <div className={styles.mainNav}>
+          <div className={styles.mainNavLeft}>
+            {Navigations.map((nav, index) => (
+              <a href={nav.link} key={index} className={styles.nav}>
+                {nav.title}
+              </a>
+            ))}
+          </div>
+          <div className={styles.mainNavRight}>
+            <div className={styles.searchContainer}>
+            <Search className={styles.searchIcon}/>
+            <form>
+              <input type="text" placeholder="Search entire store here..." />
+            </form>
+            </div>
+          </div>
         </div>
       </div>
     </header>
   );
-}
+};
+
+export default Header;

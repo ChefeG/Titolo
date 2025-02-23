@@ -1,69 +1,82 @@
-/* Сброс отступов и box-sizing */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* header {
+    background-color: bisque;
+} */
+
+.container {
+    max-width: 100%;
+    /* margin: 0.5rem 1rem; */
+    padding: 1rem 5rem;
 }
 
-body {
-    font-family: Arial, sans-serif
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding-bottom: 2rem;;
+}
+.topBarLeft {
+    display: flex;
+    gap: 1rem;
+}
+.topBarLeft a {
+    color: darkgrey;
+}
+.topBarLeft a:hover {
+    color: #1a1a1a;
+}
+.activeLink{
+    color: black !important;
+}
+.brandLogo {
+    height: 2.4rem;
+    width: 8.8rem;
+}
+.topBarRight {
+    display: flex;
+    gap: 1rem;
 }
 
-header {
-    width: 100%;
-    background-color: #fff;
-}
-
-.top-bar {
+.mainNav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    height: 60px;
-    font-size: 14px;
-    /* background-color: #f7f7f7; */
 }
-
-.top-bar-left a,
-.top-bar-right a {
-    color: #333;
-    text-decoration: none;
-    margin-right: 15px;
-}
-/* .top-bar-right a:last-child {
-    margin-right: 0;
-  } */
-.main-nav {
+.mainNavLeft {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    align-items: center;
+    gap: 1rem;
 }
 
-.nav-left a {
-    text-decoration: none;
-    color:#333;
-    margin-right: 15px;
-    font-weight: 500;
-}
-.nav-left a:last-child {
-    margin-right: 0;
+.mainNavRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav-right a {
-    text-decoration: none;
-    color:#333;
-    margin-left: 15px;
-    font-weight: 500;
-}
-
-.logo {
+.searchIcon {
+    color: #cacaca;
     position: absolute;
-    left: 50%;
-    top: 50%;                    /* Положение по вертикали */
-    transform: translate(-50%, -50%); /* Сдвиг по X и Y */
-    /* z-index: 10; */
-  }
-.main-nav {
-    position: relative; /* чтобы logo мог позиционироваться относительно родителя */
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    transition: color 0.6s ease;
+}
+
+.searchIcon:hover {
+    color: #1a1a1a;
+}
+
+.mainNavRight input{
+    width: 20rem;
+    height: 2.5rem;
+    border: 1px solid #cacaca;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+.mainNavRight input:hover,
+.mainNavRight :focus {
+    border-color: #1a1a1a;
+    color: #1a1a1a;
 }

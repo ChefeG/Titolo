@@ -1,6 +1,12 @@
+/* 1. Сброс стилей для всех элементов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+font-family: Inter, Arial, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Oxygen, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;  line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
@@ -15,27 +21,23 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #1a1a1a;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #1a1a1a;
+}
+a:focus {
+  color: #1a1a1a;
 }
 
-body {
-  /* margin: 0;
+/* body {
+  margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh; */
-  margin: 0;
-  min-width: 320px;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  /* background-color: #242424; или белый, если хочешь светлую тему */
-  /* color: rgba(255, 255, 255, 0.87); */
-
-   /* min-height: 100vh; // можно оставить, если нужно на всю высоту экрана */
-}
+  min-height: 100vh;
+} */
 
 h1 {
   font-size: 3.2em;
@@ -61,20 +63,34 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+input {
+  width: 20rem;
+  height: 2.5rem;
+  border: 1px solid #cacaca;
+  padding: 1rem 1.5rem;
+
+  font-size: 1rem;
+  outline: none;
+  color: #333;
+}
+
+input:hover,:focus {
+  border-color: #1a1a1a;
+}
+
+input::placeholder {
+  color: #cacaca;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #1a1a1a;
   }
   button {
     background-color: #f9f9f9;
   }
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
 }
