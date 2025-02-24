@@ -1,15 +1,12 @@
 import React from "react";
-import { teasers } from "./data";
+import { Slider } from "../../components/Slider/Slider";
 
 const Home = () => {
-    return (
-        <div className="scrollBar">
-            {}
-
-            <h1>Hello</h1>
-            <h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1><h1>Hello</h1>
-        </div>
-    )
-}
+  return (
+    <>
+      <Slider />
+    </>
+  );
+};
 
 export default Home;
