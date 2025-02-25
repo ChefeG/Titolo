@@ -71,23 +71,35 @@
     align-items: center;
 
     background-color: #fff;
-    border: none;
+    border: none; /* Убираем бордюр по умолчанию */
+    outline: none; /* Убираем контур по умолчанию */
     cursor : pointer;
     z-index: 10; /* чтобы кнопки были поверх карточек */
-    transition: transform 0.3s ease; /* Плавное движение */
-}
-.arrow svg {
-    position: absolute
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Плавное движение */
 }
 .arrow:hover {
     color: #1a1a1a;
     background-color:#fff ;
-    
 }
-/* .arrow :focus{
-    border: none;
-} */
-
+.arrow:focus {
+outline: none;   /* Убираем контур при фокусе */
+}
+.arrow svg {
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+.arrowLeft:hover svg{
+    transform: translateX(-5px);
+}
+.arrowRight:hover svg{
+    transform: translateX(5px);
+}
+/* Скрываем кнопку, когда она неактивна */
+/* Глобальный стиль для swiper-button-disabled */
+:global(.swiper-button-disabled) {
+    opacity: 0;
+    pointer-events: none;
+  }
 .arrowLeft {
     left: 0;
 }
@@ -96,10 +108,3 @@
     right: 0;
 }
 
-/* .leftArea:hover ~ .arrowLeft {
-    transform: translateX(-1rem);
-}
-
-.rightArea:hover ~ .arrowRight {
-    transform: translateX(1rem);
-} */

@@ -1,28 +1,37 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { teasers } from "./data";
 import styles from "./Slider.module.css";
 import "swiper/swiper-bundle.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import {ArrowLeft, ArrowRight} from  "lucide-react"
 
 export const Slider = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  // const [isBeginnig, setIsBeginning] = useState(true);
+  // const [isEnd, setIsEnd] = useState(false);
+
+  // // Функция для проверки положения слайдера
+  // const updateNavigationState = (swiper:any) => {
+  //   setIsBeginning(swiper.isBeginning);
+  //   setIsEnd(swiper.isEnd);
+  // }
   
   return (
     <div className={styles.slider}>
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation]}
         navigation={{
-          nextEl: `${styles.arrowRight}`,
-          prevEl: `${styles.arrowLeft}`,
+          nextEl: `.${styles.arrowRight}`,
+          prevEl: `.${styles.arrowLeft}`,
         }}
         pagination={{ clickable: true }}
         spaceBetween={15}
+        speed={700}
         slidesPerView={4.126}
         slidesPerGroup={4}
-        loop={true} /*в конце список начинает по новой скролится*/
+        loop={false} /*в конце список начинает по новой скролится*/
       >
         {teasers.map((teaser, index) => (
           <SwiperSlide key={index}>

@@ -55,6 +55,22 @@
     align-items: center;
 }
 
+.mainNavRight input{
+    width: 20rem;
+    height: 2.5rem;
+    border: 1px solid #cacaca;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+.mainNavRight:hover input,
+.mainNavRight:hover.searchIcon,
+.mainNavRight :focus {
+    border-color: #1a1a1a;
+    color: #1a1a1a;
+}
+
 .searchIcon {
     color: #cacaca;
     position: absolute;
@@ -67,17 +83,3 @@
     color: #1a1a1a;
 }
 
-.mainNavRight input{
-    width: 20rem;
-    height: 2.5rem;
-    border: 1px solid #cacaca;
-    padding: 1rem 2.5rem;
-    font-size: 1rem;
-    color: #333;
-    transition: border-color 0.3s ease, color 0.3s ease;
-}
-.mainNavRight input:hover,
-.mainNavRight :focus {
-    border-color: #1a1a1a;
-    color: #1a1a1a;
-}
