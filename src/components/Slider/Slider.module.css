@@ -8,30 +8,39 @@
     /* скрывает лишний контент за границами, когда будем прокручивать */
 }
 
-.sliderWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* flex-wrap: wrap; */
-    transition: transform 0.5s ease;
-    gap: 1rem;
+/* .leftArea, .rightArea {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width: 50%;
+    opacity: 0;
+} */
+
+.leftArea {
+    left: 0;
+}
+.rightArea {
+    right: 0;
 }
 
 .card {
     min-width: 20rem;
     position: relative;
-    /* overflow: hidden; */
     display: flex;
     justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 .card img{
     width: 100%;
-    max-width: 20rem;
-    /* чтобы картинка не вылехала за края */
-    height:auto;
+    height: 100%;
     display: block;
-    /* object-fit: cover; */
+    object-fit: cover;
 }
+
+.card:hover img {
+    transform: scale(1.05);
+  }
 
 .cardContent{
     position: absolute;
@@ -40,26 +49,45 @@
     justify-content: space-between;
     align-items: center;
 
-    bottom: 2rem;
+    bottom: 3rem;
     color:#fff;
 }
 
 .cardContent h3 {
     margin: 0 0 0.5rem;
+    font-size: 1.1rem;
 }
 
 .arrow {
     position: absolute;
-    /* width: auto; */
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1rem;
-    background: none;
+    width: 3rem; /* Квадратная кнопка */
+    height: 3rem; /* Квадратная кнопка */
+    padding: 1rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
     border: none;
     cursor : pointer;
-    z-index: 10;
-    /* чтобы кнопки были поверх карточек */
+    z-index: 10; /* чтобы кнопки были поверх карточек */
+    transition: transform 0.3s ease; /* Плавное движение */
 }
+.arrow svg {
+    position: absolute
+}
+.arrow:hover {
+    color: #1a1a1a;
+    background-color:#fff ;
+    
+}
+/* .arrow :focus{
+    border: none;
+} */
+
 .arrowLeft {
     left: 0;
 }
@@ -67,3 +95,11 @@
 .arrowRight {
     right: 0;
 }
+
+/* .leftArea:hover ~ .arrowLeft {
+    transform: translateX(-1rem);
+}
+
+.rightArea:hover ~ .arrowRight {
+    transform: translateX(1rem);
+} */
