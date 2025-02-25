@@ -95,3 +95,47 @@ input::placeholder {
     background-color: #f9f9f9;
   }
 }
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem; /* Квадратная кнопка */
+  height: 3rem; /* Квадратная кнопка */
+  padding: 1rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fff;
+  border: none; /* Убираем бордюр по умолчанию */
+  outline: none; /* Убираем контур по умолчанию */
+  cursor : pointer;
+  z-index: 10; /* чтобы кнопки были поверх карточек */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Плавное движение */
+}
+.arrow:hover {
+  color: #1a1a1a;
+  background-color:#fff ;
+}
+.arrow:focus {
+outline: none;   /* Убираем контур при фокусе */
+}
+.arrow svg {
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+.arrowLeft {
+  left: 0;
+}
+
+.arrowRight {
+  right: 0;
+}
+.arrowLeft:hover svg{
+  transform: translateX(-5px);
+}
+.arrowRight:hover svg{
+  transform: translateX(5px);
+}

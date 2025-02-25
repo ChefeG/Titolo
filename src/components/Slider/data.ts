@@ -1,11 +1,11 @@
-import img1 from '../../assets/JI2756_05.jpg';
-import img2 from '../../assets/JN4475_JN4472_JM3587_JD5471_JD3396_JD5469_JC6361_02.jpg';
-import img3 from '../../assets/JQ5104_07.jpg';
-import img4 from '../../assets/L47737400_04.jpg';
-import img5 from '../../assets/L47741100_06.jpg';
-import img6 from '../../assets/U740IN2_06.jpg';
-import img7 from '../../assets/URC42LA_URC42LB_URC42BC_01.jpg';
-import img8 from '../../assets/Wintersale.jpg';
+import img1 from '../../assets/Slider/JI2756_05.jpg';
+import img2 from '../../assets/Slider/JN4475_JN4472_JM3587_JD5471_JD3396_JD5469_JC6361_02.jpg';
+import img3 from '../../assets/Slider/JQ5104_07.jpg';
+import img4 from '../../assets/Slider/L47737400_04.jpg';
+import img5 from '../../assets/Slider/L47741100_06.jpg';
+import img6 from '../../assets/Slider/U740IN2_06.jpg';
+import img7 from '../../assets/Slider/URC42LA_URC42LB_URC42BC_01.jpg';
+import img8 from '../../assets/Slider/Wintersale.jpg';
 
 type teaser = {
     image: string

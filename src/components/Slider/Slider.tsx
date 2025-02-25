@@ -9,26 +9,18 @@ import {ArrowLeft, ArrowRight} from  "lucide-react"
 export const Slider = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  // const [isBeginnig, setIsBeginning] = useState(true);
-  // const [isEnd, setIsEnd] = useState(false);
 
-  // // Функция для проверки положения слайдера
-  // const updateNavigationState = (swiper:any) => {
-  //   setIsBeginning(swiper.isBeginning);
-  //   setIsEnd(swiper.isEnd);
-  // }
-  
   return (
     <div className={styles.slider}>
       <Swiper
         modules={[Navigation]}
         navigation={{
-          nextEl: `.${styles.arrowRight}`,
-          prevEl: `.${styles.arrowLeft}`,
+          nextEl: "#arrowRight",
+          prevEl: "#arrowLeft",
         }}
         pagination={{ clickable: true }}
         spaceBetween={15}
-        speed={700}
+        speed={1000}
         slidesPerView={4.126}
         slidesPerGroup={4}
         loop={false} /*в конце список начинает по новой скролится*/
@@ -45,8 +37,8 @@ export const Slider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button ref={prevRef} className={`${styles.arrow} ${styles.arrowLeft}`} id="arrowLeft"><ArrowLeft/></button>
-      <button ref={nextRef} className={`${styles.arrow} ${styles.arrowRight}`} id="arrowRight"><ArrowRight/></button>
+      <button ref={prevRef} className="arrow arrowLeft" id="arrowLeft"><ArrowLeft/></button>
+      <button ref={nextRef} className="arrow arrowRight" id="arrowRight"><ArrowRight/></button>
     </div>
   );
 };
