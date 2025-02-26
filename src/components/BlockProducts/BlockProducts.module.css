@@ -1,0 +1,33 @@
+.blockInfo {
+    position: relative;
+    /* чтобы кнопки-стрелки могли располагаться поверх контента */
+    width: 100%;
+    max-width: 67%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+
+.blockContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3rem;
+    font-weight: 500;
+    gap: 1.5rem;
+}
+/* .blockContent h2 {
+    font-size: 2rem;
+} */
+
+.buttonExplore {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonExplore button{
+    font-size: 1rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}

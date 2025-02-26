@@ -4,7 +4,7 @@ import styles from "./Slider.module.css";
 import "swiper/swiper-bundle.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import {ArrowLeft, ArrowRight} from  "lucide-react"
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export const Slider = () => {
   const prevRef = useRef(null);
@@ -18,12 +18,18 @@ export const Slider = () => {
           nextEl: "#arrowRight",
           prevEl: "#arrowLeft",
         }}
+        effect='slide' // Эффект перехода (slide, fade, cube и т.д.)
         pagination={{ clickable: true }}
         spaceBetween={15}
         speed={1000}
         slidesPerView={4.126}
         slidesPerGroup={4}
         loop={false} /*в конце список начинает по новой скролится*/
+        // breakpoints={{
+        //   640: { slidesPerView: 1, slidesPerGroup: 1 },
+        //   768: { slidesPerView: 2, slidesPerGroup: 2 },
+        //   1024: { slidesPerView: 4, slidesPerGroup: 4 },
+        // }}
       >
         {teasers.map((teaser, index) => (
           <SwiperSlide key={index}>
@@ -37,8 +43,12 @@ export const Slider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button ref={prevRef} className="arrow arrowLeft" id="arrowLeft"><ArrowLeft/></button>
-      <button ref={nextRef} className="arrow arrowRight" id="arrowRight"><ArrowRight/></button>
+      <button ref={prevRef} className="arrow arrowLeft" id="arrowLeft">
+        <ArrowLeft />
+      </button>
+      <button ref={nextRef} className="arrow arrowRight" id="arrowRight">
+        <ArrowRight />
+      </button>
     </div>
   );
 };
