@@ -2,8 +2,6 @@ import image1_1 from '../../assets/BlockInfo/dd1391-103-1.jpg';
 import image1_2 from '../../assets/BlockInfo/dd1391-103-2.jpg';
 import image2_1 from '../../assets/BlockInfo/dm0211-100-1.jpg'
 import image2_2 from '../../assets/BlockInfo/dm0211-100-2.jpg'
-import image3_1 from '../../assets/BlockInfo/dm0211-101-1.jpg'
-import image3_2 from '../../assets/BlockInfo/dm0211-101-2.jpg'
 import image4_1 from '../../assets/BlockInfo/fb9660-003-1.jpg'
 import image4_2 from '../../assets/BlockInfo/fb9660-003-2.jpg'
 import image5_1 from '../../assets/BlockInfo/fb9933-100-1.jpg'

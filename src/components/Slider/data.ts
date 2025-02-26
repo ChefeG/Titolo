@@ -14,12 +14,12 @@ type teaser = {
 }
 
 export const teasers: teaser[] = [
-    { image: img1, title: "WMNS ADIDAS GAZELLE INDOOR", buttonTitle: "shop now" },
-    { image: img2, title: "ADIDAS TAILORED COLLECTION", buttonTitle: "shop now" },
-    { image: img3, title: "ADIDAS SAMBA 62", buttonTitle: "shop now" },
-    { image: img4, title: "SALOMON XT-6", buttonTitle: "shop now" },
+    {image: img8, title: "WINTERSALE AT TITOLO", buttonTitle: "More" },
+    { image: img7, title: "NEW BALACNE RC42", buttonTitle: "shop now" },
     { image: img5, title: "SALOMON XT-4 OG", buttonTitle: "shop now" },
     { image: img6, title: "NEW BALANCE 740", buttonTitle: "shop now" },
-    { image: img7, title: "NEW BALACNE RC42", buttonTitle: "shop now" },
-    { image: img8, title: "WINTERSALE AT TITOLO", buttonTitle: "More" },
+    { image: img3, title: "ADIDAS SAMBA 62", buttonTitle: "shop now" },
+    { image: img1, title: "WMNS ADIDAS GAZELLE INDOOR", buttonTitle: "shop now" },
+    { image: img2, title: "ADIDAS TAILORED COLLECTION", buttonTitle: "shop now" },
+    { image: img4, title: "SALOMON XT-6", buttonTitle: "shop now" },
 ];

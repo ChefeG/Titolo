@@ -1,0 +1,34 @@
+.swiperProducts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.swiperProduct img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.productInfo{
+
+}
+.productInfo p {
+    color:darkgray
+}
+.productInfo span{
+    color: #1a1a1a;
+}
+
+.productPrice{
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+}
+.productPrice :first-child{
+    text-decoration: line-through;
+}
+.productPrice span:last-child{
+    color:red
+}
