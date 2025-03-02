@@ -5,7 +5,7 @@ import { Navigation } from "swiper/modules";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { ProductCard } from "../ProductCard/ProductCard";
 
-export const BlockProducts = ({ data, title }: { data: any, title:any }) => {
+export const BlockProducts = ({ data, title }: { data: any; title: any }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -31,16 +31,20 @@ export const BlockProducts = ({ data, title }: { data: any, title:any }) => {
           slidesPerGroup={4}
           loop={false}
           breakpoints={{
-            640: { slidesPerView: 1, slidesPerGroup: 1 },
-            768: { slidesPerView: 2, slidesPerGroup: 2 },
+            640: { slidesPerView: 2, slidesPerGroup: 2 },
+            // 768: { slidesPerView: 2, slidesPerGroup: 2 },
             1024: { slidesPerView: 4, slidesPerGroup: 4 },
           }}
         >
-          {data.map((slide:any, index:number) => (
-            <SwiperSlide key={index}>
-              <ProductCard data={slide}/>
-            </SwiperSlide>
-          ))}
+          <ul>
+            {data.map((slide: any, index: number) => (
+              <li>
+                <SwiperSlide key={index}>
+                  <ProductCard data={slide} />
+                </SwiperSlide>
+              </li>
+            ))}
+          </ul>
         </Swiper>
         <button ref={prevRef} className="arrow arrowLeft" id={prevId}>
           <ArrowLeft />
@@ -50,7 +54,10 @@ export const BlockProducts = ({ data, title }: { data: any, title:any }) => {
         </button>
       </div>
       <div className={styles.buttonExplore}>
-        <button>{title.buttonTitle}<ArrowRight/></button>
+        <button>
+          {title.buttonTitle}
+          <ArrowRight />
+        </button>
       </div>
     </div>
   );
