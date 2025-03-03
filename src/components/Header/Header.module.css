@@ -1,13 +1,19 @@
-/* header {
-    background-color: bisque;
-} */
-
 .container {
-    max-width: 100%;
-    margin: 0 15rem;
-    padding: 1rem 5rem;
-    
+    display: block;
+    max-width: 90rem; /* или другое значение */
+    width: 100%;
+    margin: 0 auto;    /* автоцентровка */
+    padding: 1rem 2rem; /* можно задать отступы, подходящие для мобильных устройств */
 }
+
+.mobileContainer{
+    display: none;
+    max-width: 90rem; /* или другое значение */
+    width: 100%;
+    margin: 0 auto;    /* автоцентровка */
+    padding: 1rem 2rem; /* можно задать отступы, подходящие для мобильных устройств */
+}
+
 
 .topBar {
     display: flex;
@@ -29,6 +35,7 @@
     color: black !important;
 }
 .brandLogo {
+    max-width: 100%;
     height: 2.4rem;
     width: 8.8rem;
 }
@@ -41,6 +48,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 100%;
 }
 .mainNavLeft {
     display: flex;
@@ -83,3 +91,53 @@
     color: #1a1a1a;
 }
 
+/* TODO: input должен прерватится в иконку  */
+@media (max-width: 1024px) { /*планшеты*/
+    .container{
+        display: none;
+    }
+
+    .mobileContainer{
+        display: block;
+        padding: 0 2rem;
+    }
+    .topBar {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        padding-bottom: 0;
+
+    }
+    .topBarLeft {
+        display: flex;
+        justify-content: flex-start;
+        align-items:center;
+    }
+    .topBarLeft button{
+        padding: 0;
+        margin: 0;
+
+        border: none;
+        background-color: #fff;
+    }
+    .topBarLeft:hover button{
+        border: none;
+        color: black;
+    }
+    .topBarLeft button:focus{
+        outline: none;
+    }
+    .topBarLeft svg{
+        height: 2rem;
+        width: auto;
+    }
+    .topBarLeft:hover svg {
+        transform: none;
+    }
+
+    .brandLogo {
+        max-width: 80%;
+        height: 2.4rem;
+        width: 8.8rem;
+    }
+}

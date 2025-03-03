@@ -17,6 +17,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  background-color: #fff;
+}
+
 a {
   font-weight: 500;
   color: #1a1a1a;
@@ -154,4 +158,10 @@ outline: none;   /* Убираем контур при фокусе */
 }
 .arrowRight:hover svg{
   transform: translateX(5px);
+}
+
+@media (max-width: 1280px) {
+    body {
+      font-size: 15px;
+    }
 }
