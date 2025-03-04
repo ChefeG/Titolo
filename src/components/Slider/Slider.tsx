@@ -26,8 +26,9 @@ export const Slider = () => {
         slidesPerGroup={4}
         loop={false} /*в конце список начинает по новой скролится*/
         breakpoints={{
+          480: { slidesPerView: 1, slidesPerGroup: 1 },
           640: { slidesPerView: 2, slidesPerGroup: 2 },
-          // 768: { slidesPerView: 2, slidesPerGroup: 2 },
+          768: { slidesPerView: 2, slidesPerGroup: 2 },
           1024: { slidesPerView: 4, slidesPerGroup: 4 },
         }}
       >

@@ -1,8 +1,8 @@
 import { create } from "zustand";
 
 interface GlobalState {
-  language: "EN" | "RU" | "DE" | "FR";
-  setLanguage: (language: "EN" | "RU" | "DE" | "FR") => void;
+  language: string;
+  setLanguage: (language: string) => void;
 }
 
 export const useHeaderStore = create<GlobalState>((set) => ({

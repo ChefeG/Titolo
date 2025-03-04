@@ -1,3 +1,7 @@
+/* .header {
+    position: relative;
+    z-index: 1001;
+} */
 .container {
     display: block;
     max-width: 90rem; /* или другое значение */
@@ -100,6 +104,7 @@
     .mobileContainer{
         display: block;
         padding: 0 2rem;
+        position: relative;
     }
     .topBar {
         display: flex;

@@ -1,0 +1,83 @@
+.menuBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+}
+.subBar li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.subBar svg{
+    height: 80%;
+    width: auto;
+}
+ .icon {
+    position: absolute;
+    transition: opacity 0.3s ease;
+ }
+.visible {
+    opacity: 1;
+}
+.hidden {
+    opacity: 0;
+}
+.sidebar {
+    position: fixed;
+    margin-top: 2.65rem;
+    top: 0;
+    left: 0;
+    width: 25rem;
+    height: 100%;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+    z-index: 1000;
+    font-size: larger;
+}
+.sidebar.open {
+    transform: translateX(0);
+}
+.overlay {
+    position: fixed;
+    top: 2.65rem;
+    /* top: 0; */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 2.65rem);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Ниже сайдбара, но выше контента */
+}
+
+.sidebarNav {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: calc(100vh - 2.65rem);
+}
+.sidebarNav li{
+    padding:1.5rem;
+    border-bottom: 1px solid #ededed;
+}
+.sidebarNav li:first-child{
+    padding:1rem;
+    padding-left: 1.5rem;
+    border-bottom: 1px solid #ededed;
+}
+.navigation a {
+    color: #271107
+}
+.languages{
+    display: flex;
+    gap: 1rem;
+    background-color: #ededed;
+    font-size: smaller;
+}
+
+.activeLink{
+    color: black !important;
+}
