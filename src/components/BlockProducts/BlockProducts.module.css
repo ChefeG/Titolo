@@ -31,3 +31,9 @@
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
 }
+
+@media (max-width: 1024px) {
+    .blockInfo {
+        max-width: 90%;
+    }
+}

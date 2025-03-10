@@ -27,13 +27,12 @@ export const BlockProducts = ({ data, title }: { data: any; title: any }) => {
           }}
           spaceBetween={15}
           speed={1000}
-          slidesPerView={4}
-          slidesPerGroup={4}
           loop={false}
           breakpoints={{
-            640: { slidesPerView: 2, slidesPerGroup: 2 },
-            // 768: { slidesPerView: 2, slidesPerGroup: 2 },
-            1024: { slidesPerView: 4, slidesPerGroup: 4 },
+            480: { slidesPerView: 1.126, slidesPerGroup: 1 },
+            640: { slidesPerView: 2.126, slidesPerGroup: 2 },
+            768: { slidesPerView: 2.126, slidesPerGroup: 2},
+            1024: { slidesPerView: 4.126, slidesPerGroup: 4 },
           }}
         >
           <ul>

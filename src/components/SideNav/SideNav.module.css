@@ -28,7 +28,7 @@
 }
 .sidebar {
     position: fixed;
-    margin-top: 2.65rem;
+    margin-top: 4rem;
     top: 0;
     left: 0;
     width: 25rem;
@@ -44,11 +44,10 @@
 }
 .overlay {
     position: fixed;
-    top: 2.65rem;
-    /* top: 0; */
+    top: var(--header-height);
     left: 0;
     width: 100%;
-    height: calc(100vh - 2.65rem);
+    height: calc(100vh - var(--header-height));
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999; /* Ниже сайдбара, но выше контента */
 }

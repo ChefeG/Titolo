@@ -6,16 +6,16 @@ import { useHeaderStore } from "../../store/useHeaderStore";
 
 export const SideNav = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [openCategoryIndex, setOpenCategoryIndex] = useState(null);
+  const [isSubOpen, setIsSubOpen] = useState(false);
   const { language, setLanguage } = useHeaderStore();
 
   const toggleSideNav = () => {
     setIsOpen(!isOpen);
   };
 
-  const toggleCategory = (index:any) => {
-    setOpenCategoryIndex(openCategoryIndex === index ? null : index);
-  };
+  const toggleSubBar = () => {
+    setIsSubOpen(!isSubOpen);
+  }
 
   //фиксаця скрола body и сохранение позиции sidebarNav
   useEffect(() => {
@@ -76,7 +76,7 @@ export const SideNav = () => {
               {Navigations.map((nav, index) => (
                 nav.link !== '' ? <a href={nav.link} key={index} className={styles.nav}>
                 <li>{nav.title}</li>
-              </a> : <a onClick={toggleCategory} className={styles.subBar}><li>{nav.title}<ChevronDown/></li></a>
+              </a> : <a onClick={toggleSubBar} className={styles.subBar}><li>{nav.title}<ChevronDown/></li></a>
               ))}
             </div>
           </ul>

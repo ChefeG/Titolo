@@ -3,11 +3,16 @@ import styles from "./Header.module.css";
 import { useHeaderStore } from "../../store/useHeaderStore";
 import logo from "../../assets/bandLogo.svg";
 import { languages, Navigations } from "./data";
-import { UserRound, ShoppingCart, Heart, Search } from "lucide-react";
+import { UserRound, ShoppingCart, Heart, Search, X } from "lucide-react";
 import { SideNav } from "../SideNav/SideNav";
 
 const Header = () => {
-  const {language, setLanguage} = useHeaderStore()
+  const { language, setLanguage } = useHeaderStore();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSearchNav = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <header className={styles.header}>
@@ -68,13 +73,17 @@ const Header = () => {
       <div className={styles.mobileContainer}>
         <div className={styles.topBar}>
           <div className={styles.topBarLeft}>
-            <SideNav/>
+            <SideNav />
           </div>
           <div>
             <img className={styles.brandLogo} src={logo} alt="logo" />
           </div>
           <div className={styles.topBarRight}>
-            <a key="UserRound" href="#">
+            <a
+              className={styles.searchBtn}
+              onClick={toggleSearchNav}
+              key="Search"
+            >
               <Search />
             </a>
             <a key="Heart" href="#">
@@ -85,6 +94,20 @@ const Header = () => {
             </a>
           </div>
         </div>
+        {isOpen && (
+          <div className={styles.searchMobileContainer}>
+            <input type="text" placeholder="Search entire store here..." />
+            <a className={styles.xSearchBtn} onClick={toggleSearchNav}>
+              <X />
+            </a>
+            {
+              <div
+                className={styles.overlay}
+                onClick={() => setIsOpen(false)}
+              />
+            }
+          </div>
+        )}
         {/* <div className={styles.mainNav}>
           <div className={styles.mainNavRight}>
             <div className={styles.searchContainer}>

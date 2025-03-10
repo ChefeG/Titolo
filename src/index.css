@@ -5,11 +5,33 @@
   box-sizing: border-box;
 }
 
+/* https://transfonter.org/ */
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter/Inter18pt-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter/Inter24pt-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter/Inter28pt-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  font-family: Inter, Arial, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Oxygen, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;  font-weight: 400;
+  font-family: Inter, Arial, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, Oxygen, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,27 +41,31 @@
 
 body {
   background-color: #fff;
+  font-family: 'Inter', sans-serif;
 }
 
 a {
-  font-weight: 500;
-  color: #1a1a1a;
+  font-weight: 400;
+  color: #222222;
   text-decoration: inherit;
 }
 a:hover {
-  color: #1a1a1a;
+  color: #222222;
 }
 a:focus {
-  color: #1a1a1a;
+  color: #222222;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-weight: 600;
 }
 
 h2{
-  font-size: 2.2rem;
+  font-size: 38px;
+  color: #222222;
+  font-weight: 500;
 }
 
 h3{
@@ -47,7 +73,8 @@ h3{
 }
 
 p {
-  color:#585858
+  color:#585858;
+  font-weight: 400;
 }
 li{
   list-style: none;
@@ -60,18 +87,18 @@ button {
   gap: 0.5rem;
 
   width: fit-content;
-  border: 1px solid #1a1a1a;
+  border: 1px solid #222222;
   padding: 0.6em 2.3rem;
   font-size: 0.85rem;
   font-weight: bold;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #222222;
   cursor: pointer;
   transition: background-color 0.5s ease, color 0.25s ease;
 }
 button:hover {
   color: #fff;
-  background-color: #1a1a1a;
+  background-color: #222222;
 }
 button:focus,
 button:focus-visible {
@@ -96,7 +123,7 @@ input {
 }
 
 input:hover,:focus {
-  border-color: #1a1a1a;
+  border-color: #222222;
 }
 
 input::placeholder {
@@ -109,10 +136,10 @@ input::placeholder {
     background-color: #ffffff;
   }
   a:hover {
-    color: #1a1a1a;
+    color: #222222;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
   }
 }
 
@@ -120,8 +147,8 @@ input::placeholder {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 3rem; /* Квадратная кнопка */
-  height: 3rem; /* Квадратная кнопка */
+  width: 3rem; 
+  height: 3rem;
   padding: 1rem;
   
   display: flex;
@@ -136,7 +163,7 @@ input::placeholder {
   transition: opacity 0.3s ease, transform 0.3s ease; /* Плавное движение */
 }
 .arrow:hover {
-  color: #1a1a1a;
+  color: #222222;
   background-color:#fff ;
 }
 .arrow:focus {
@@ -163,5 +190,13 @@ outline: none;   /* Убираем контур при фокусе */
 @media (max-width: 1280px) {
     body {
       font-size: 15px;
+      background-color: #fff;
     }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 4rem;
+    --header-height-search: 8.5rem;
+  }
 }

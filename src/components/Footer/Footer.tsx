@@ -14,7 +14,8 @@ const Footer = () => {
         </p>
         <div>
           <form className={styles.blockForm}>
-            <input placeholder="Your e-mail" />
+            <input type="text" id="email" required />
+            <label htmlFor="email">Your e-mail</label>
             <button>Sign up</button>
           </form>
         </div>
@@ -39,19 +40,29 @@ const Footer = () => {
             <h3>Company</h3>
             <ul>
               <li>
-                <a href="#" key="about">About</a>
+                <a href="#" key="about">
+                  About
+                </a>
               </li>
               <li>
-                <a href="#" key="theStores">The Stores</a>
+                <a href="#" key="theStores">
+                  The Stores
+                </a>
               </li>
               <li>
-                <a href="#" key="Jobs">Jobs</a>
+                <a href="#" key="Jobs">
+                  Jobs
+                </a>
               </li>
               <li>
-                <a href="#" key="privacyPolicy">Privacy Policy</a>
+                <a href="#" key="privacyPolicy">
+                  Privacy Policy
+                </a>
               </li>
               <li>
-                <a href="#" key="Imprint">Imprint</a>
+                <a href="#" key="Imprint">
+                  Imprint
+                </a>
               </li>
             </ul>
           </div>
@@ -59,19 +70,29 @@ const Footer = () => {
             <h3>Customer service</h3>
             <ul>
               <li>
-                <a href="#" key="contactUs">Contact Us</a>
+                <a href="#" key="contactUs">
+                  Contact Us
+                </a>
               </li>
               <li>
-                <a href="#" key="shipping">Shipping</a>
+                <a href="#" key="shipping">
+                  Shipping
+                </a>
               </li>
               <li>
-                <a href="#" key="terms&Conditions">Terms & Conditions</a>
+                <a href="#" key="terms&Conditions">
+                  Terms & Conditions
+                </a>
               </li>
               <li>
-                <a href="#" key="payment">Payment</a>
+                <a href="#" key="payment">
+                  Payment
+                </a>
               </li>
               <li>
-                <a href="#" key="giftcards">Giftcards</a>
+                <a href="#" key="giftcards">
+                  Giftcards
+                </a>
               </li>
             </ul>
           </div>

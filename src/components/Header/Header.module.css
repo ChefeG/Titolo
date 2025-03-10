@@ -1,21 +1,23 @@
-/* .header {
-    position: relative;
-    z-index: 1001;
-} */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    background-color: #fff;
+}
 .container {
     display: block;
     max-width: 90rem; /* или другое значение */
     width: 100%;
     margin: 0 auto;    /* автоцентровка */
     padding: 1rem 2rem; /* можно задать отступы, подходящие для мобильных устройств */
+    background-color: #fff;
 }
 
 .mobileContainer{
     display: none;
-    max-width: 90rem; /* или другое значение */
-    width: 100%;
-    margin: 0 auto;    /* автоцентровка */
-    padding: 1rem 2rem; /* можно задать отступы, подходящие для мобильных устройств */
+    background-color: #fff;
 }
 
 
@@ -23,7 +25,8 @@
     display: flex;
     justify-content: space-between;
     align-items:center;
-    padding-bottom: 2rem;;
+    padding-bottom: 2rem;
+    background-color: #fff;
 }
 .topBarLeft {
     display: flex;
@@ -103,14 +106,22 @@
 
     .mobileContainer{
         display: block;
-        padding: 0 2rem;
-        position: relative;
+        padding: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 1002;
+        /* font-size: 15px; */
+        background-color: #fff;
     }
     .topBar {
         display: flex;
         justify-content: space-between;
         align-items:center;
-        padding-bottom: 0;
+        padding: 1.5rem;
+        padding-bottom: 0.5rem;
+        background-color: #fff;
 
     }
     .topBarLeft {
@@ -141,8 +152,45 @@
     }
 
     .brandLogo {
+        position: absolute;
+        top: 1rem;
+        left: 50%; transform: translateX(-50%);
+
         max-width: 80%;
-        height: 2.4rem;
-        width: 8.8rem;
+        height: auto;
+        width:7rem;
+    }
+
+    .searchBtn{
+        cursor: pointer;
+    }
+    .searchMobileContainer{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        border-top: 1px solid #cacaca;
+    }
+    .searchMobileContainer input{
+        width: 100%;
+        margin: 1rem;
+    }
+    .overlay{
+        position: fixed;
+        top: var(--header-height-search);
+        left: 0;
+        width: 100%;
+        height: calc(100% - var(--header-height-search));
+        /* height: calc(100% - 5rem); */
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    .xSearchBtn{
+        position: absolute;
+        right: 0;
+        /* margin-right: 2.5rem; */
+        margin-right: 3%;
+        margin-top: 0.3rem;
+        cursor: pointer;
     }
 }

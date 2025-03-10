@@ -26,10 +26,10 @@ export const Slider = () => {
         slidesPerGroup={4}
         loop={false} /*в конце список начинает по новой скролится*/
         breakpoints={{
-          480: { slidesPerView: 1, slidesPerGroup: 1 },
-          640: { slidesPerView: 2, slidesPerGroup: 2 },
-          768: { slidesPerView: 2, slidesPerGroup: 2 },
-          1024: { slidesPerView: 4, slidesPerGroup: 4 },
+          480: { slidesPerView: 1.126, slidesPerGroup: 1 },
+          640: { slidesPerView: 2.126, slidesPerGroup: 2 },
+          768: { slidesPerView: 2.126, slidesPerGroup: 2},
+          1024: { slidesPerView: 4.126, slidesPerGroup: 4 },
         }}
       >
         <ul>
@@ -37,7 +37,9 @@ export const Slider = () => {
             <li>
               <SwiperSlide key={index}>
                 <div className={styles.card}>
+                  <div className={styles.imageContainer}>
                   <img key={index} src={teaser.image} alt={teaser.title} />
+                  </div>
                   <div className={styles.cardContent}>
                     <h3>{teaser.title}</h3>
                     <button>{teaser.buttonTitle}</button>
