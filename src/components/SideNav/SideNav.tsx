@@ -20,11 +20,11 @@ export const SideNav = () => {
     }));
   };
 
-  const recursiveSubNav = (subNav: any, index: number) => {
-    subNav.link === '' ? recursiveSubNav(subNav.subNav, index) : (
-      <a href={subNav.link} className={styles.subBar}>{subNav.title}</a>
-    )
-  }
+  // const recursiveSubNav = (subNav: any, index: number) => {
+  //   subNav.link === '' ? recursiveSubNav(subNav.subNav, index) : (
+  //     <a href={subNav.link} className={styles.subBar}>{subNav.title}</a>
+  //   )
+  // }
   
 
   //фиксаця скрола body и сохранение позиции sidebarNav
@@ -106,7 +106,7 @@ export const SideNav = () => {
                   </a>
                 )}
                 {openSubMenus[index] && nav.subItems && (
-                  <ul>
+                  <ul className={styles.subBarNav}>
                     {nav.subItems.map((subItem, id) => (
                       <li key={id}>
                         {subItem.link !== '' ? (

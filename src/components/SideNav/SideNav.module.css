@@ -6,16 +6,6 @@
   width: 2rem;
   height: 2rem;
 }
-.subBar li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-}
-.subBar svg{
-    height: 80%;
-    width: auto;
-}
  .icon {
     position: absolute;
     transition: opacity 0.3s ease;
@@ -79,4 +69,30 @@
 
 .activeLink{
     color: black !important;
+}
+
+.subBarNav li {
+    border-bottom:none; 
+    margin-left: 1rem;
+    font-size: 16px;
+}
+.subBarNav li:first-child{
+    border-bottom:none; 
+}
+.subBarNav {
+    border-bottom: 1px solid #ededed;
+}
+
+/* .subBarNav li:last-child {
+    border-bottom: 1px solid #ededed;
+} */
+.subBar li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.subBar svg{
+    height: 80%;
+    width: auto;
 }
