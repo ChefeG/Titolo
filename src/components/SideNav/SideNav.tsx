@@ -6,16 +6,26 @@ import { useHeaderStore } from "../../store/useHeaderStore";
 
 export const SideNav = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isSubOpen, setIsSubOpen] = useState(false);
+  const [openSubMenus, setOpenSubMenus] = useState<Record<number, boolean>>({});
   const { language, setLanguage } = useHeaderStore();
 
   const toggleSideNav = () => {
     setIsOpen(!isOpen);
   };
 
-  const toggleSubBar = () => {
-    setIsSubOpen(!isSubOpen);
+  const toggleSubBar = (index: number) => {
+    setOpenSubMenus((prev) => ({
+      ...prev,
+      [index]: !prev[index || 0], // Если индекс undefined, используем 0 как запасной вариант
+    }));
+  };
+
+  const recursiveSubNav = (subNav: any, index: number) => {
+    subNav.link === '' ? recursiveSubNav(subNav.subNav, index) : (
+      <a href={subNav.link} className={styles.subBar}>{subNav.title}</a>
+    )
   }
+  
 
   //фиксаця скрола body и сохранение позиции sidebarNav
   useEffect(() => {
@@ -46,9 +56,16 @@ export const SideNav = () => {
         className={styles.menuBtn}
         onClick={toggleSideNav}
       >
-        <AlignJustify className={`${styles.icon} ${!isOpen ? styles.visible : styles.hidden}` }/>
-        <X className={`${styles.icon} ${isOpen ? styles.visible : styles.hidden}` }/>
-
+        <AlignJustify
+          className={`${styles.icon} ${
+            !isOpen ? styles.visible : styles.hidden
+          }`}
+        />
+        <X
+          className={`${styles.icon} ${
+            isOpen ? styles.visible : styles.hidden
+          }`}
+        />
       </button>
       {isOpen && (
         <div className={styles.overlay} onClick={() => setIsOpen(false)} />
@@ -72,12 +89,37 @@ export const SideNav = () => {
                 </a>
               ))}
             </li>
+
             <div className={styles.navigation}>
-              {Navigations.map((nav, index) => (
-                nav.link !== '' ? <a href={nav.link} key={index} className={styles.nav}>
-                <li>{nav.title}</li>
-              </a> : <a onClick={toggleSubBar} className={styles.subBar}><li>{nav.title}<ChevronDown/></li></a>
-              ))}
+              {Navigations.map((nav, index) =>
+              <React.Fragment key={index}>
+               { nav.link !== "" ? (
+                  <a href={nav.link} key={index} className={styles.nav}>
+                    <li>{nav.title}</li>
+                  </a>
+                ) : (
+                  <a onClick={() => toggleSubBar(index)} className={styles.subBar}>
+                    <li>
+                      {nav.title}
+                      <ChevronDown />
+                    </li>
+                  </a>
+                )}
+                {openSubMenus[index] && nav.subItems && (
+                  <ul>
+                    {nav.subItems.map((subItem, id) => (
+                      <li key={id}>
+                        {subItem.link !== '' ? (
+                          <a href={subItem.link} className={styles.subBar}>{subItem.title}</a>
+                        ) : (
+                          <a onClick={() => toggleSubBar(id)} className={styles.subBar}>{subItem.title}<ChevronDown /></a>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                </React.Fragment>
+              )}
             </div>
           </ul>
         </nav>
