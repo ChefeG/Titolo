@@ -75,17 +75,15 @@
     border-bottom:none; 
     margin-left: 1rem;
     font-size: 16px;
+    padding-left: 0 1.5rem;
 }
 .subBarNav li:first-child{
     border-bottom:none; 
+    padding: 1.5rem;
 }
 .subBarNav {
     border-bottom: 1px solid #ededed;
 }
-
-/* .subBarNav li:last-child {
-    border-bottom: 1px solid #ededed;
-} */
 .subBar li {
     display: flex;
     justify-content: space-between;

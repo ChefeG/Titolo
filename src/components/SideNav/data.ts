@@ -34,7 +34,7 @@ export const Navigations: navigation[] = [
         { title: "Apparel", link: "/kids/apparel" },
         { title: "Accessories", link: "/kids/accessories" },
       ],}, 
-    {title: 'Brands', link: '', subItems: [{title:"adidas", link:""}],},
+    {title: 'Brands', link: '', subItems: [{title:"adidas", link:"#"}],},
     {title: 'New Arrivals', link: '#', subItems:[]},
     {title: 'Coming Soon', link: '#', subItems:[]},
     {title: 'Sale', link: '#', subItems:[]},

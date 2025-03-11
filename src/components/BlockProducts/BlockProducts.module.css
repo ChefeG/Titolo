@@ -2,7 +2,7 @@
     position: relative;
     /* чтобы кнопки-стрелки могли располагаться поверх контента */
     width: 100%;
-    max-width: 67%;
+    max-width: 90%;
     margin: 0 auto;
     margin-bottom: 5rem;
 }
@@ -33,7 +33,10 @@
 }
 
 @media (max-width: 1024px) {
-    .blockInfo {
-        max-width: 90%;
+    .blockInfo h2{
+        font-size: 24px;
+    }
+    .blockInfo p {
+        font-size: 16px;
     }
 }

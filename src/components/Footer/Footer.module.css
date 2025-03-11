@@ -114,16 +114,32 @@
 }
 
 @media (max-width: 1024px) {
-    .container{
-        display: flex;
-        justify-content:center;
-        align-items:center;
-        flex-direction: row;
-        height: 27rem;
-        gap: 5rem;
-        line-height: 2;
+    .blockForm{
+        flex-direction: column;
     }
-
+    .newsletter{
+        margin:2rem ;
+    }
+    .newsletter h2 {
+        font-size: 24px;
+    }
+    .newsletter p {
+        font-size: 16px;
+    }
+    .blockForm label {
+        top: 15%;
+        left: 25%;
+    }
+    .blockForm button{
+        font-size: 0.9rem;
+    }
+    .container {
+        flex-direction: column;
+        height: 40rem;
+        gap: 1rem;
+        line-height: 2.2;
+        text-align: center;
+    }
     .bottomText{
         margin: 1rem 2rem;
         line-height: 1.5;

@@ -112,7 +112,7 @@ export const SideNav = () => {
                         {subItem.link !== '' ? (
                           <a href={subItem.link} className={styles.subBar}>{subItem.title}</a>
                         ) : (
-                          <a onClick={() => toggleSubBar(id)} className={styles.subBar}>{subItem.title}<ChevronDown /></a>
+                          <a onClick={() => toggleSubBar(id)}>{subItem.title}<ChevronDown /></a>
                         )}
                       </li>
                     ))}

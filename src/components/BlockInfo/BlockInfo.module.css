@@ -1,7 +1,7 @@
 .blockInfo{
     /* чтобы кнопки-стрелки могли располагаться поверх контента */
     width: 100%;
-    max-width: 67%;
+    max-width: 90%;
     margin: 0 auto;
     margin-bottom: 3rem;
     display: flex;
@@ -54,8 +54,14 @@
     padding-bottom: 0.3rem;
 }
 
-@media (max-width: 1024px) {
-    .blockInfo {
-        max-width: 90%;
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .blockInfo h2 {
+        font-size: 24px;
+    }
+    .blockInfo p {
+        font-size: 16px;
     }
 }
