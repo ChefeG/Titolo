@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styles from "./Header.module.css";
-import { useHeaderStore } from "../../store/useHeaderStore";
-import logo from "../../assets/bandLogo.svg";
-import { languages, Navigations } from "./data";
+import { useHeaderStore } from "../../Entities/Header/useHeaderStore";
+import logo from "../../Shared/assets/bandLogo.svg";
+import { languages, Navigations } from "../../Entities/Header/headerData";
 import { UserRound, ShoppingCart, Heart, Search, X } from "lucide-react";
-import { SideNav } from "../SideNav/SideNav";
+import { SideNav } from "../../Features/SideNav/SideNav";
 
 const Header = () => {
   const { language, setLanguage } = useHeaderStore();

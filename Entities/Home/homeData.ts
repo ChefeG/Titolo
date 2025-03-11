@@ -1,22 +1,23 @@
-import image1_1 from '../../assets/BlockInfo/dd1391-103-1.jpg';
-import image1_2 from '../../assets/BlockInfo/dd1391-103-2.jpg';
-import image2_1 from '../../assets/BlockInfo/dm0211-100-1.jpg'
-import image2_2 from '../../assets/BlockInfo/dm0211-100-2.jpg'
-import image4_1 from '../../assets/BlockInfo/fb9660-003-1.jpg'
-import image4_2 from '../../assets/BlockInfo/fb9660-003-2.jpg'
-import image5_1 from '../../assets/BlockInfo/fb9933-100-1.jpg'
-import image5_2 from '../../assets/BlockInfo/fb9933-100-2.jpg'
-import image6_1 from '../../assets/BlockInfo/fv5029-141-1.jpg'
-import image6_2 from '../../assets/BlockInfo/fv5029-141-2.jpg'
-import image7_1 from '../../assets/BlockInfo/fz4133-640-1.jpg'
-import image7_2 from '../../assets/BlockInfo/fz4133-640-2.jpg'
-import image8_1 from '../../assets/BlockInfo/m2002rst-1.jpg'
-import image8_2 from '../../assets/BlockInfo/m2002rst-2.jpg'
-import imageInfo_1 from '../../assets/BlockProducts/1203A388-101_08.jpg'
-import imageInfo_2 from '../../assets/BlockProducts/JF2581_03.jpg'
-import imageInfo_3 from '../../assets/BlockProducts/JR1206_06.jpg'
-import imageInfo_1_1 from '../../assets/BlockInfo_2/Titolo_Z_rich_1.jpg'
-import imageInfo_1_2 from '../../assets/BlockInfo_2/Unbenannt-1.jpg'
+// import image1_1 from '../../assets/BlockInfo/dd1391-103-1.jpg';
+import image1_1 from '../../Shared/assets/BlockInfo/dd1391-103-1.jpg'
+import image1_2 from '../../Shared/assets/BlockInfo/dd1391-103-2.jpg';
+import image2_1 from '../../Shared/assets/BlockInfo/dm0211-100-1.jpg'
+import image2_2 from '../../Shared/assets/BlockInfo/dm0211-100-2.jpg'
+import image4_1 from '../../Shared/assets/BlockInfo/fb9660-003-1.jpg'
+import image4_2 from '../../Shared/assets/BlockInfo/fb9660-003-2.jpg'
+import image5_1 from '../../Shared/assets/BlockInfo/fb9933-100-1.jpg'
+import image5_2 from '../../Shared/assets/BlockInfo/fb9933-100-2.jpg'
+import image6_1 from '../../Shared/assets/BlockInfo/fv5029-141-1.jpg'
+import image6_2 from '../../Shared/assets/BlockInfo/fv5029-141-2.jpg'
+import image7_1 from '../../Shared/assets/BlockInfo/fz4133-640-1.jpg'
+import image7_2 from '../../Shared/assets/BlockInfo/fz4133-640-2.jpg'
+import image8_1 from '../../Shared/assets/BlockInfo/m2002rst-1.jpg'
+import image8_2 from '../../Shared/assets/BlockInfo/m2002rst-2.jpg'
+import imageInfo_1 from '../../Shared/assets/BlockProducts/1203A388-101_08.jpg'
+import imageInfo_2 from '../../Shared/assets/BlockProducts/JF2581_03.jpg'
+import imageInfo_3 from '../../Shared/assets/BlockProducts/JR1206_06.jpg'
+import imageInfo_1_1 from '../../Shared/assets/BlockInfo_2/Titolo_Z_rich_1.jpg'
+import imageInfo_1_2 from '../../Shared/assets/BlockInfo_2/Unbenannt-1.jpg'
 
 
 

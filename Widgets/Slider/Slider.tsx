@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { teasers } from "./data";
+import { teasers } from "../../Entities/Slider/sliderData";
 import styles from "./Slider.module.css";
 import "swiper/swiper-bundle.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -28,7 +28,7 @@ export const Slider = () => {
         breakpoints={{
           480: { slidesPerView: 1.126, slidesPerGroup: 1 },
           640: { slidesPerView: 2.126, slidesPerGroup: 2 },
-          768: { slidesPerView: 2.126, slidesPerGroup: 2},
+          768: { slidesPerView: 2.126, slidesPerGroup: 2 },
           1024: { slidesPerView: 4.126, slidesPerGroup: 4 },
         }}
       >
@@ -38,7 +38,7 @@ export const Slider = () => {
               <SwiperSlide key={index}>
                 <div className={styles.card}>
                   <div className={styles.imageContainer}>
-                  <img key={index} src={teaser.image} alt={teaser.title} />
+                    <img key={index} src={teaser.image} alt={teaser.title} />
                   </div>
                   <div className={styles.cardContent}>
                     <h3>{teaser.title}</h3>

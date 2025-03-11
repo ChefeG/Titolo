@@ -194,3 +194,7 @@
         cursor: pointer;
     }
 }
+
+@media (max-width: 480px) {
+    
+}

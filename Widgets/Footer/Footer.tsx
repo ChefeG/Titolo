@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import logo from "../../assets/bandLogo.svg";
+import logo from "../../Shared/assets/bandLogo.svg";
 import { Instagram, Facebook, Twitter } from "lucide-react";
 
 const Footer = () => {

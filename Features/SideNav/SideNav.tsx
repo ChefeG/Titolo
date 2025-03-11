@@ -1,8 +1,8 @@
 import { AlignJustify, ChevronDown, X } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import styles from "./SideNav.module.css";
-import { languages, Navigations } from "./data";
-import { useHeaderStore } from "../../store/useHeaderStore";
+import { languages, Navigations } from "../../Entities/SideNav/sideNavData";
+import { useHeaderStore } from "../../Entities/Header/useHeaderStore";
 
 export const SideNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +25,6 @@ export const SideNav = () => {
   //     <a href={subNav.link} className={styles.subBar}>{subNav.title}</a>
   //   )
   // }
-  
 
   //фиксаця скрола body и сохранение позиции sidebarNav
   useEffect(() => {
@@ -91,35 +90,43 @@ export const SideNav = () => {
             </li>
 
             <div className={styles.navigation}>
-              {Navigations.map((nav, index) =>
-              <React.Fragment key={index}>
-               { nav.link !== "" ? (
-                  <a href={nav.link} key={index} className={styles.nav}>
-                    <li>{nav.title}</li>
-                  </a>
-                ) : (
-                  <a onClick={() => toggleSubBar(index)} className={styles.subBar}>
-                    <li>
-                      {nav.title}
-                      <ChevronDown />
-                    </li>
-                  </a>
-                )}
-                {openSubMenus[index] && nav.subItems && (
-                  <ul className={styles.subBarNav}>
-                    {nav.subItems.map((subItem, id) => (
-                      <li key={id}>
-                        {subItem.link !== '' ? (
-                          <a href={subItem.link} className={styles.subBar}>{subItem.title}</a>
-                        ) : (
-                          <a onClick={() => toggleSubBar(id)}>{subItem.title}<ChevronDown /></a>
-                        )}
+              {Navigations.map((nav, index) => (
+                <React.Fragment key={index}>
+                  {nav.link !== "" ? (
+                    <a href={nav.link} key={index} className={styles.nav}>
+                      <li>{nav.title}</li>
+                    </a>
+                  ) : (
+                    <a
+                      onClick={() => toggleSubBar(index)}
+                      className={styles.subBar}
+                    >
+                      <li>
+                        {nav.title}
+                        <ChevronDown />
                       </li>
-                    ))}
-                  </ul>
-                )}
+                    </a>
+                  )}
+                  {openSubMenus[index] && nav.subItems && (
+                    <ul className={styles.subBarNav}>
+                      {nav.subItems.map((subItem, id) => (
+                        <li key={id}>
+                          {subItem.link !== "" ? (
+                            <a href={subItem.link} className={styles.subBar}>
+                              {subItem.title}
+                            </a>
+                          ) : (
+                            <a onClick={() => toggleSubBar(id)}>
+                              {subItem.title}
+                              <ChevronDown />
+                            </a>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </React.Fragment>
-              )}
+              ))}
             </div>
           </ul>
         </nav>
