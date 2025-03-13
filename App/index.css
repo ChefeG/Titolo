@@ -58,7 +58,7 @@ a:focus {
 
 h1 {
   font-size: 3.2em;
-  line-height: 1.1;
+  color: #222222;
   font-weight: 600;
 }
 
@@ -78,6 +78,10 @@ p {
 }
 li{
   list-style: none;
+}
+span {
+  color: #000;
+  font-weight: 400;
 }
 
 button {

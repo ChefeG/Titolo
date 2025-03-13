@@ -1,17 +1,9 @@
 import React from "react";
-import { Slider } from "../../Widgets/Slider/Slider";
-import { BlockProducts } from "../../Widgets/BlockProducts/BlockProducts";
-import {
-  data_1,
-  data_2,
-  dataInfo_1,
-  dataInfo_2,
-  title_1,
-  title_2,
-  titleInfo_1,
-  titleInfo_2,
-} from "../../Entities/Home/homeData";
-import { BlockInfo } from "../../Widgets/BlockInfo/BlockInfo";
+
+import { BlockInfo } from "../../../Widgets/BlockInfo/BlockInfo";
+import { data_1, data_2, dataInfo_1, dataInfo_2, title_1, title_2, titleInfo_1, titleInfo_2 } from "../../../Entities/Home/homeData";
+import { BlockProducts } from "../../../Widgets/BlockProducts/BlockProducts";
+import { Slider } from "../../../Widgets/Slider/Slider";
 
 const Home = () => {
   return (

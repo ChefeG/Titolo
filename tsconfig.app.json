@@ -22,5 +22,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "vite-env.d.ts", "App/main.tsx", "Pages", "Entities/Header", "Widgets/Footer", "Widgets/Header", "Features/SideNav", "Widgets/Slider", "Features/ProductCard", "Widgets/BlockProducts", "Widgets/BlockInfo", "Entities/Home/homeData.ts", "Entities/Header/headerData.ts", "Entities/SideNav/sideNavData.ts", "Entities/Slider/sliderData.ts"]
+  "include": ["src", "vite-env.d.ts", "App/main.tsx", "Pages", "Entities/Header", "Widgets/Footer", "Widgets/Header", "Features/SideNav", "Widgets/Slider", "Features/ProductCard", "Widgets/BlockProducts", "Widgets/BlockInfo", "Entities/Home/homeData.ts", "Entities/Header/headerData.ts", "Entities/SideNav/sideNavData.ts", "Entities/Slider/sliderData.ts", "Features/BreadCrumbs"]
 }
