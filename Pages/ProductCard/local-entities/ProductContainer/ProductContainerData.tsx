@@ -6,6 +6,7 @@ export type Description = {
     buttonSize:string
     buttonAdd:string
     link:string
+    sizes:number[]
 }
 
 export type ImagesSrc = {
@@ -20,6 +21,7 @@ export const Descriptions: Description = {
     buttonSize: 'Size',
     buttonAdd:'Add to Cart',
     link: 'Check in-store availability',
+    sizes: [40,40.5,41,41.5,42,42.5,43,43.5,44,44.5,45]
 }
 
 export const Images: ImagesSrc[] = [

@@ -91,6 +91,59 @@
 .sizeAndAddToCart:hover svg {
     transform: none;
 }
+
+.sizeGrid{
+    position: fixed;
+    top:53%;
+    background-color: #fff;
+    z-index:1010;
+    bottom: 0;
+    max-height: 25rem;
+    width: 20rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: auto;
+}
+.countrySize{
+    max-height:3rem;
+    background-color: #ededed;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 5px solid #fff;
+}
+.countrySize button {
+    background-color: #ededed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 3rem;
+}
+.active{
+    color: #000 !important;
+    text-decoration: underline;
+}
+.sizeGrid button {
+    color:#585858;
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    outline: none;
+}
+.sizeGrid button:hover  {
+    text-decoration: underline;
+    background-color: #ededed;
+}
+.sizeOption:hover svg {
+    transform: none;
+}
+.sizeOption {
+    display: flex;
+    justify-content: flex-start;
+}
+
 .loyaltyInfo{
 border: 1px solid #ccc;
 padding: 1.5rem;
