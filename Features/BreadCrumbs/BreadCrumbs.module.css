@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.3rem;
+
+    padding: 2.4rem;
+    font-size: 1rem;
+
+    max-width: 90rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.breadCrumbsLink {
+    color:#ccc
+}
+
+.backToCategory{
+    padding: 0.5rem 1rem;
+    max-width: 90rem;
+    width: 100%;
+    margin: 0 auto;
+}
+.backToCategory a {
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    gap: 0.3rem;
+}
+.backToCategory svg {
+    height: 1rem;
+    width: auto;
+    
+}
+
+@media (max-width: 769px) {
+    .breadCrumbsLink{
+        opacity: 0;
+    }
+}

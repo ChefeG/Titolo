@@ -1,0 +1,151 @@
+.Footer {
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 4rem 0;
+}
+.newsletter h2{
+    text-transform: uppercase;
+}
+
+.blockForm{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;   
+    width: 38rem;
+}
+.blockForm input,
+.blockForm button {
+    height: 3rem;
+    box-sizing: border-box;
+}
+.blockForm input{
+    flex: 1;
+}
+.blockForm label {
+    position: absolute;
+    color:#cccccc;
+    left: 0;
+    margin-left: 1.5rem;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.blockForm:focus-within label {
+    transform: translateY(-110%);
+    font-size: 0.7rem;
+}
+.blockForm button{
+    font-size: 1rem;
+}
+
+
+.footerInfo{
+    background-color: black;
+}
+.container {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: row;
+    height: 27rem;
+    gap: 10rem;
+    line-height: 2.2;
+}
+.container img{
+    height: 2.5rem;
+    width: 100%;
+}
+.container svg {
+    background-color: #000000;
+    color: #fff;
+    border: 1px solid #4b4b4b;
+    border-radius: 50%;
+    width: 2.5rem; /* Увеличиваем размер контейнера */
+    height: 2.5rem;
+    padding: 0.4rem; /* Отступ остаётся */
+    box-sizing: border-box; /* Включаем padding и border в width/height */
+}
+.container:hover svg {
+    color: #fff;
+}
+.container h3{
+    color:#fff;
+}
+.container a {
+    color: #bbbbbb;
+}
+.container1{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.containerImages {
+    display: flex;
+    gap: 3rem;
+    margin-left: 0.5rem;
+}
+
+.bottomText{
+    margin: 3rem 6rem;
+    line-height: 1.5;
+    
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 2rem;
+}
+.bottomText h3 {
+    font-size:medium;
+    margin-bottom: 0.5rem;
+}
+.bottomText p{
+    color: #818181;
+}
+
+@media (max-width: 1024px) {
+    .blockForm{
+        flex-direction: column;
+    }
+    .newsletter{
+        margin:2rem ;
+    }
+    .newsletter h2 {
+        font-size: 24px;
+    }
+    .newsletter p {
+        font-size: 16px;
+    }
+    .blockForm label {
+        top: 15%;
+        left: 25%;
+    }
+    .blockForm button{
+        font-size: 0.9rem;
+    }
+    .container {
+        flex-direction: column;
+        height: 40rem;
+        gap: 1rem;
+        line-height: 2.2;
+        text-align: center;
+    }
+    .bottomText{
+        margin: 1rem 2rem;
+        line-height: 1.5;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

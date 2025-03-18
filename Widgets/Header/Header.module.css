@@ -1,0 +1,200 @@
+.header {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    background-color: #fff;
+}
+.container {
+    display: block;
+    max-width: 90rem; /* или другое значение */
+    width: 100%;
+    margin: 0 auto;    /* автоцентровка */
+    padding: 1rem 2rem; /* можно задать отступы, подходящие для мобильных устройств */
+    background-color: #fff;
+}
+
+.mobileContainer{
+    display: none;
+    background-color: #fff;
+}
+
+
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding-bottom: 2rem;
+    background-color: #fff;
+}
+.topBarLeft {
+    display: flex;
+    gap: 1rem;
+}
+.topBarLeft a {
+    color: darkgrey;
+}
+.topBarLeft a:hover {
+    color: #1a1a1a;
+}
+.activeLink{
+    color: black !important;
+}
+.brandLogo {
+    max-width: 100%;
+    height: 2.4rem;
+    width: 8.8rem;
+}
+.topBarRight {
+    display: flex;
+    gap: 1rem;
+}
+
+.mainNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+.mainNavLeft {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mainNavRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainNavRight input{
+    width: 20rem;
+    height: 2.5rem;
+    border: 1px solid #cacaca;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+.mainNavRight:hover input,
+.mainNavRight:hover.searchIcon,
+.mainNavRight :focus {
+    border-color: #1a1a1a;
+    color: #1a1a1a;
+}
+
+.searchIcon {
+    color: #cacaca;
+    position: absolute;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    transition: color 0.6s ease;
+}
+
+.searchIcon:hover {
+    color: #1a1a1a;
+}
+
+/* TODO: input должен прерватится в иконку  */
+@media (max-width: 1024px) { /*планшеты*/
+    .container{
+        display: none;
+    }
+
+    .mobileContainer{
+        display: block;
+        padding: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 1002;
+        /* font-size: 15px; */
+        background-color: #fff;
+    }
+    .topBar {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        padding: 1.5rem;
+        padding-bottom: 0.5rem;
+        background-color: #fff;
+
+    }
+    .topBarLeft {
+        display: flex;
+        justify-content: flex-start;
+        align-items:center;
+    }
+    .topBarLeft button{
+        padding: 0;
+        margin: 0;
+
+        border: none;
+        background-color: #fff;
+    }
+    .topBarLeft:hover button{
+        border: none;
+        color: black;
+    }
+    .topBarLeft button:focus{
+        outline: none;
+    }
+    .topBarLeft svg{
+        height: 2rem;
+        width: auto;
+    }
+    .topBarLeft:hover svg {
+        transform: none;
+    }
+
+    .brandLogo {
+        position: absolute;
+        top: 1rem;
+        left: 50%; transform: translateX(-50%);
+
+        max-width: 80%;
+        height: auto;
+        width:7rem;
+    }
+
+    .searchBtn{
+        cursor: pointer;
+    }
+    .searchMobileContainer{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        border-top: 1px solid #cacaca;
+    }
+    .searchMobileContainer input{
+        width: 100%;
+        margin: 1rem;
+    }
+    .overlay{
+        position: fixed;
+        top: var(--header-height-search);
+        left: 0;
+        width: 100%;
+        height: calc(100% - var(--header-height-search));
+        /* height: calc(100% - 5rem); */
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    .xSearchBtn{
+        position: absolute;
+        right: 0;
+        /* margin-right: 2.5rem; */
+        margin-right: 3%;
+        margin-top: 0.3rem;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 480px) {
+    
+}

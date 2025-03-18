@@ -1,0 +1,206 @@
+/* 1. Сброс стилей для всех элементов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* https://transfonter.org/ */
+@font-face {
+  font-family: 'Inter';
+  src: url('/Shared/assets/fonts/inter/Inter18pt-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/Shared/assets/fonts/inter/Inter24pt-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/Shared/assets/fonts/inter/Inter28pt-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-family: Inter, Arial, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, Oxygen, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+a {
+  font-weight: 400;
+  color: #222222;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #222222;
+}
+a:focus {
+  color: #222222;
+}
+
+h1 {
+  font-size: 3.2em;
+  color: #222222;
+  font-weight: 600;
+}
+
+h2{
+  font-size: 38px;
+  color: #222222;
+  font-weight: 500;
+}
+
+h3{
+  color: #818181;
+}
+
+p {
+  color:#585858;
+  font-weight: 400;
+}
+li{
+  list-style: none;
+}
+span {
+  color: #000;
+  font-weight: 400;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  width: fit-content;
+  border: 1px solid #222222;
+  padding: 0.6em 2.3rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  font-family: inherit;
+  background-color: #222222;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.25s ease;
+}
+button:hover {
+  color: #fff;
+  background-color: #222222;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+button svg{
+  transition: transform 0.5s ease
+}
+button:hover svg {
+  transform: translateX(10px);
+}
+input {
+  width: 20rem;
+  height: 2.5rem;
+  border: 1px solid #cacaca;
+  padding: 1rem 1.5rem;
+
+  font-size: 1rem;
+  outline: none;
+  color: #333;
+  transition: border-color 0.5s ease;
+}
+
+input:hover,:focus {
+  border-color: #222222;
+}
+
+input::placeholder {
+  color: #cacaca;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #222222;
+  }
+  button {
+    background-color: #ffffff;
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem; 
+  height: 3rem;
+  padding: 1rem;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fff;
+  border: none; /* Убираем бордюр по умолчанию */
+  outline: none; /* Убираем контур по умолчанию */
+  cursor : pointer;
+  z-index: 10; /* чтобы кнопки были поверх карточек */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Плавное движение */
+}
+.arrow:hover {
+  color: #222222;
+  background-color:#fff ;
+}
+.arrow:focus {
+outline: none;   /* Убираем контур при фокусе */
+}
+.arrow svg {
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+.arrowLeft {
+  left: 0;
+}
+
+.arrowRight {
+  right: 0;
+}
+.arrowLeft:hover svg{
+  transform: translateX(-5px);
+}
+.arrowRight:hover svg{
+  transform: translateX(5px);
+}
+
+@media (max-width: 1280px) {
+    body {
+      font-size: 15px;
+      background-color: #fff;
+    }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 4rem;
+    --header-height-search: 8.5rem;
+  }
+}
