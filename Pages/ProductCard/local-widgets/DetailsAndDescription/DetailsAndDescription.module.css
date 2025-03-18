@@ -35,6 +35,7 @@
 .icons{
     display: flex;
     gap:1rem;
+    cursor: pointer;
 }
 .containerLinksLeft h2 {
     font-size: 24px;
@@ -44,4 +45,44 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width:1024px){
+    .container {
+        margin: 0 auto;
+    }
+    .containerLinks{
+        width: 40rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5rem 0;
+    }
+    .containerLinksLeft{
+        border-right: 1px solid #ccc;
+        margin-right: 10rem;
+        padding-right: 10rem;
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        /* width: 20rem; */
+    }
+    .containerLinksLeft h2 {
+        font-size: 24px;
+    }
+    .icons{
+        display: flex;
+        gap:1rem;
+    }
+    .containerLinksLeft h2 {
+        font-size: 24px;
+    }
+    .containerLinksRight{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
 }

@@ -17,7 +17,7 @@ import {
   Images,
   ImagesSrc,
 } from "../../local-entities/ProductContainer/ProductContainerData";
-import { useProductContainerStore } from "../../useProductContainerStore";
+import { useProductContainerStore } from "../../local-entities/ProductContainer/useProductContainerStore";
 
 export const ProductContainer = () => {
   const descriptions: Description = Descriptions;
